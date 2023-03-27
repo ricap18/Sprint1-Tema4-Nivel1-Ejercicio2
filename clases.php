@@ -2,26 +2,21 @@
 
 <?php
 
-class Shape {              //  Clase Padre
-    
+abstract class Shape {              //  Clase Padre
    protected $width;
    protected $height;
+abstract public function area($width, $height);  
 
-   public function __construct ($width, $height){   // Metodo constructor
-        $this-> width = $width;
-        $this-> height = $height;
-   }
 }
 class Triangle extends Shape {       // Clase hija
-   public function area() {
-      return ($this-> width * $this-> height)/2;
+   public function area($width, $height) {
+      return ($width * $height)/2;
    }
 }
 class Rectangle extends Shape {      // Clase hija
-   public function area() {
-      return ($this-> width * $this-> height);
+   public function area($width, $height) {
+      return ($width * $height);
    }
 }
 
 ?>
-

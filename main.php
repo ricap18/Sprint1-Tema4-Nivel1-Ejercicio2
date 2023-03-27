@@ -11,11 +11,12 @@
 <?php
 
 require_once "clases.php";
-$areaTriangle = new Triangle(8, 10);  
-echo "El area del triangulo es: " . $areaTriangle -> area();
+$areaTriangle = new Triangle;  
+echo "El area del triangulo es: " . $areaTriangle -> area(5, 5);
 echo "</br>";
-$areaRectangle = new Rectangle(5, 7);
-echo "El area del rectangulo es: " . $areaRectangle -> area();
+echo "</br>";
+$areaRectangle = new Rectangle;
+echo "El area del rectangulo es: " . $areaRectangle -> area(5, 5);
 
 ?>
 
